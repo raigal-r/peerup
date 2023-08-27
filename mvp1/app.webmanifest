@@ -1,0 +1,14 @@
+{
+    "name": "PEERUP",
+    "short_name": "PEERUP",
+    "icons": [
+        {"src": "./public/favicon.ico",
+        "sizes": "196x196",
+        "type": "image/png",
+        "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#EEF0F4",
+    "background_color": "#EEF0F4",
+    "display": "standalone"
+}
