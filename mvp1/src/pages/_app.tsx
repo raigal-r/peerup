@@ -2,7 +2,6 @@ import { type AppType } from "next/app";
 import { api } from "~/utils/api";
 import "~/styles/globals.css";
 
-
 import "@/styles/globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import type { AppProps } from "next/app";
@@ -51,15 +50,18 @@ const wagmiConfig = createConfig({
 })
 /*******************************************************************/
 
+const queryClient = new QueryClient();
 
-
-const MyApp: AppType = ({ Component, pageProps }) => {
+function MyApp({ Component, pageProps }: AppProps)  {
   return (
-  <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains}>
-        <Component {...pageProps} />
-      </RainbowKitProvider>
-  </WagmiConfig>
+  <QueryClientProvider client={queryClient}>
+    <WagmiConfig config={wagmiConfig}>
+        <RainbowKitProvider chains={chains}>
+          <Component {...pageProps} />
+          <ToastContainer />
+        </RainbowKitProvider>
+    </WagmiConfig>
+  </QueryClientProvider>
   );
 };
 
