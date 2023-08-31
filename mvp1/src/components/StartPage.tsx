@@ -16,18 +16,18 @@ export default function StartPage () {
                         PEERUP
                     </h1>
                     <div className="w-[60vw]">
-                        <p className="text-xl text-center tracking-tight text-white mt-10 sm:text-xl md:text-xl lg:text-xl xl:text-xl">
+                        <p className="text-xl text-center tracking-tight text-white sm:text-xl md:text-xl lg:text-xl xl:text-xl">
                             Welcome in PEERUP the decentralized financial management with chat for teams and small communities  
                         </p>
                     </div>
-                    <h2 className="text-xl font-bold text-center tracking-tight text-white mt-10 sm:text-xl md:text-xl lg:text-xl xl:text-xl">
+                    <h2 className="text-xl font-bold text-center tracking-tight text-white sm:text-xl md:text-xl lg:text-xl xl:text-xl">
                         To join you can:                    
                     </h2>
                 </div>
 
-                <div className="flex flex-col mt-5 items-center justify-around border-dotted border-2 border-gray-400">
-                    <div className="text-center mb-10">
-                        <p className="text-xl w-[50vw] text-center tracking-tight text-white mb-2 sm:text-xl md:text-xl lg:text-xl xl:text-xl">
+                <div className="flex flex-col items-center justify-around border-dotted border-2 border-gray-400">
+                    <div className="text-center ">
+                        <p className="text-xl w-[50vw] text-center tracking-tight text-white  sm:text-xl md:text-xl lg:text-xl xl:text-xl">
                             Connect with an existing wallet:
                         </p>
                         <div className="flex items-center justify-center">
@@ -36,18 +36,18 @@ export default function StartPage () {
                     </div>
                 </div>
 
-                <div className="flex flex-col items-center justify-around opacity-60 border-dotted border-2 border-gray-400 bg-[#0097b3] rounded-xl pr-5 pl-5 mb-10">
+                <div className="flex flex-col items-center justify-around opacity-60 border-dotted border-2 border-gray-400 bg-[#0097b3] rounded-xl pr-5 pl-5">
                     
-                    <div className="mb-10">
-                        <div className="mb-4">
-                            <h2 className="text-xl font-bold text-center tracking-tight text-white mt-10 sm:text-xl md:text-xl lg:text-xl xl:text-xl">
+                    <div>
+                        <div>
+                            <h2 className="text-xl font-bold text-center tracking-tight text-white sm:text-xl md:text-xl lg:text-xl xl:text-xl">
                                 Comming soon:                   
                             </h2>
                         </div>
 
-                        <div className="flex flex-col items-center justify-center mb-4 ">
+                        <div className="flex flex-col items-center justify-center ">
                             <div>
-                                <p className="text-xl tracking-tight text-white mb-2">
+                                <p className="text-xl tracking-tight text-white">
                                     Connect using your Google account:
                                 </p>
                             </div>
