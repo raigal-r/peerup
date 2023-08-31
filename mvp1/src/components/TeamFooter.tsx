@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-
 import homeIcon from "./home-icon.svg"
 import chatIcon from "./home-icon.svg"
 import treasuryIcon from "./treasury-icon.svg"
@@ -8,7 +7,7 @@ import contactsIcon from "./contacts-icon.svg"
 
 export default function TeamFooter () {
     return(
-        <section>
+        <section className="MyApp">
             <main>
                 <div>
                     <div className="container-fluid min-h-[10px] flex flex-grow justify-between bg-[#0097b3] border-opacity-20 border-solid border-2 border-gray-100 rounded-xl">
