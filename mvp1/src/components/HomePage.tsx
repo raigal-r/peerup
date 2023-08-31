@@ -1,39 +1,38 @@
 //Rainbow Kit Connect button import
-import CreateTeamButton from './CreateTeamButton';
 import Header from './Header';
 import Footer from './Footer';
 
+//Router
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+
+//Other pages from button
+import ChatPage from './ChatPage';
+import NotificationsPage from './NotificationsPage';
+import ProfilePage from './ProfilePage';
+import YourGroupsPage from './YourGroupsPage';
+import { useState } from "react";
+
+
 
 export default function HomePage () {
+
+    const [selectedComponent, setSelectedComponent] = useState<'home' | 'chat' | 'notification' | 'profile' | null>(
+        null
+      );
 
     return(
         <section>
             <div className="MyApp flex flex-col min-h-screen bg-[#0097b3] items-between justify-between">
             <Header/>
-            <main className="flex flex-col items-center justify-between bg-[#0097b3] pt-10">
-                <div className="flex flex-col items-center justify-center" >
-                    <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl max-h-[64px] mb-4">
-                        Your Teams
-                    </h1>
-
-                    <div className="w-[75vw]">
-                        <p className="text-xl text-center tracking-tight text-white sm:text-xl md:text-xl lg:text-xl xl:text-xl mb-20">
-                            Here will appear your Teams
-                        </p>
-                    </div>
-                </div>
-
-                <div className="flex flex-col items-center justify-around">
-                    <div className="text-center ">
-                        <div className="flex items-center justify-center">
-                            <CreateTeamButton />
-                        </div>
-                    </div>
-                </div>
-            </main>
-            <Footer/>
+            {/* Conditionally render different components based on selectedComponent */}
+            {selectedComponent === null && <YourGroupsPage />}
+            {selectedComponent === 'home' && <YourGroupsPage />}
+            {selectedComponent === 'chat' && <ChatPage />}
+            {selectedComponent === 'notification' && <NotificationsPage />}
+            {selectedComponent === 'profile' && <ProfilePage />}
+            <Footer setSelectedComponent={setSelectedComponent} />
             </div>
-
         </section>
     )
 
