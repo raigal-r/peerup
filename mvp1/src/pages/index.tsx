@@ -29,7 +29,7 @@ const Index = () => {
         console.error("Error navigating:", error);
       });
     }
-  }, [router, address]);
+  }, [router, isConnected]);
   
 
   return (
