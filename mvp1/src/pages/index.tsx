@@ -5,7 +5,10 @@ import { api } from "~/utils/api";
 //Rainbow Kit Connect button import
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import StartPage from "../components/StartPage";
+import HomePage from "../components/HomePage";
+
 
 
 
@@ -16,7 +19,6 @@ export default function Home() {
 
   return (
     <>
-    <div className="base">
       <Head>
         <title>PEERUP</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -30,10 +32,17 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@100&display=swap" rel="stylesheet" />
       </Head>
-  
-      <Header />
-      <StartPage/>
-  
+
+      <div className="flex flex-col min-h-screen min-w-screen bg-[#0097b3] items-center justify-between" >
+        <div className="min-w-screen">
+          <Header />
+        </div>
+        <div>
+          <HomePage/>
+        </div>
+        <div className="min-w-screen">
+          <Footer/>
+        </div>
       </div>
     </>
   );
