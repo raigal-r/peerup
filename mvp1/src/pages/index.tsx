@@ -33,16 +33,11 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@100&display=swap" rel="stylesheet" />
       </Head>
 
-      <div className="flex flex-col min-h-screen min-w-screen bg-[#0097b3] items-center justify-between" >
-        <div className="min-w-screen">
+      <div className="flex flex-col min-h-screen bg-[#0097b3] items-between justify-between" >
           <Header />
-        </div>
-        <div>
           <HomePage/>
-        </div>
-        <div className="min-w-screen">
           <Footer/>
-        </div>
+
       </div>
     </>
   );
