@@ -16,7 +16,7 @@ export default function StartPage () {
                         PEERUP
                     </h1>
                     <div className="w-[75vw]">
-                        <p className="text-xl text-center tracking-tight text-white sm:text-xl md:text-xl lg:text-xl xl:text-xl">
+                        <p className="text-xl text-center tracking-tight text-white sm:text-xl md:text-xl lg:text-xl xl:text-xl mb-20">
                             Welcome in PEERUP the decentralized financial management with chat for teams and small communities  
                         </p>
                     </div>
@@ -27,7 +27,7 @@ export default function StartPage () {
 
                 <div className="flex flex-col items-center justify-around border-dotted border-2 border-gray-400">
                     <div className="text-center ">
-                        <p className="text-xl w-[75vw] text-center tracking-tight text-white  sm:text-xl md:text-xl lg:text-xl xl:text-xl">
+                        <p className="text-xl w-[75vw] text-center tracking-tight text-white  sm:text-xl md:text-xl lg:text-xl xl:text-xl mb-4">
                             Connect with an existing wallet:
                         </p>
                         <div className="flex items-center justify-center">
@@ -39,14 +39,9 @@ export default function StartPage () {
                 <div className="flex flex-col items-center justify-around opacity-60 border-dotted border-2 border-gray-400 bg-[#0097b3] rounded-xl pr-5 pl-5">
                     
                     <div>
-                        <div>
-                            <h2 className="text-xl font-bold text-center tracking-tight text-white sm:text-xl md:text-xl lg:text-xl xl:text-xl">
-                                Comming soon:                   
-                            </h2>
-                        </div>
-
-                        <div className="flex flex-col items-center justify-center ">
-                            <div>
+                        
+                        <div className="flex flex-col items-center justify-center mb-4">
+                            <div className="mb-4">
                                 <p className="text-xl tracking-tight text-white">
                                     Connect using your Google account:
                                 </p>
@@ -57,7 +52,11 @@ export default function StartPage () {
                                 </div>
                                 <p className="btn-text"><b>Sign in with google</b></p>
                             </div>
-                            
+                        </div>
+                        <div>
+                            <h2 className="text-xl font-bold text-center tracking-tight text-white sm:text-xl md:text-xl lg:text-xl xl:text-xl">
+                                Comming soon                 
+                            </h2>
                         </div>
 
                     </div>
