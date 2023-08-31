@@ -8,7 +8,7 @@ import CreateTeamButton from './CreateTeamButton';
 
 export default function HomePage () {
     return(
-        <section>
+        <section className="MyApp">
             <main className="flex flex-col items-center justify-between bg-[#0097b3] pt-10">
                 <div className="flex flex-col items-center justify-center" >
                     <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl max-h-[64px] mb-4">

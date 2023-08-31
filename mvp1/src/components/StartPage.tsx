@@ -19,7 +19,7 @@ export default function StartPage () {
     const { address, connector, isConnected } = useAccount()
 
     return(
-        <section>
+        <section className="MyApp">
             <main className="flex min-h-screen flex-col items-center justify-around bg-[#0097b3]">
                 <div className="flex flex-col items-center justify-center" >
                     <img src="./192.png"/>
