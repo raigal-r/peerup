@@ -7,7 +7,6 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Header from "../components/Header";
 import StartPage from "../components/StartPage";
 
-import LoggedIn from "../components/LoggedIn";
 
 
 
