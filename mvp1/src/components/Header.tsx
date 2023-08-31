@@ -13,7 +13,7 @@ export default function Header () {
                     <div className="container-fluid min-h-[10px] flex flex-grow justify-between bg-[#0097b3] border-opacity-20 border-solid border-2 border-gray-100 rounded-xl">
                         <div className="flex justify-start items-center ml-4 mt-4 mb-4">
                             <img src="./192.png" className="max-w-[15%]" alt="logo"/>
-                            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl max-h-[64px]">
+                            <h1 className="font-extrabold tracking-tight text-white sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl max-h-[64px]">
                                 PEERUP
                             </h1>
                         </div>
