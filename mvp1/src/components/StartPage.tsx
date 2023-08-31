@@ -12,9 +12,9 @@ export default function StartPage () {
             <main className="flex min-h-screen flex-col items-center justify-around bg-[#0097b3]">
                 <div className="flex flex-col items-center justify-center" >
                     <img src="./192.png"/>
-                    <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl max-h-[64px]">
+                    <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl max-h-[64px]">
                         PEERUP
-                    </h1>
+                    </h1>∫
                     <div className="w-[75vw]">
                         <p className="text-xl text-center tracking-tight text-white sm:text-xl md:text-xl lg:text-xl xl:text-xl mb-20">
                             Welcome in PEERUP the decentralized financial management with chat for teams and small communities  
