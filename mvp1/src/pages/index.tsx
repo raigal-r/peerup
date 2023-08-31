@@ -1,7 +1,3 @@
-import Head from "next/head";
-import Link from "next/link";
-import { api } from "~/utils/api";
-
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { Suspense, useEffect } from "react";
