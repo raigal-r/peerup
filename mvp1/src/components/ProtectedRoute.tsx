@@ -1,4 +1,3 @@
-//import useWalletStore from "../store/wallet";
 import { useRouter } from "next/router";
 import React, { useCallback, useEffect, useState } from "react";
 
@@ -6,8 +5,6 @@ import {
     useAccount,
     useConnect,
     useDisconnect,
-    useEnsAvatar,
-    useEnsName,
   } from 'wagmi'
 
 function ProtectedRoute({ children }: any) {
