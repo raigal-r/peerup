@@ -9,7 +9,8 @@ export default function HomePage () {
    
 
     return(
-        <section className="MyApp">
+        <section>
+            <div className="MyApp flex flex-col min-h-screen bg-[#0097b3] items-between justify-between">
             <Header/>
             <main className="flex flex-col items-center justify-between bg-[#0097b3] pt-10">
                 <div className="flex flex-col items-center justify-center" >
@@ -33,6 +34,7 @@ export default function HomePage () {
                 </div>
             </main>
             <Footer/>
+            </div>
 
         </section>
     )
