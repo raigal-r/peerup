@@ -1,10 +1,3 @@
-import Head from "next/head";
-import Link from "next/link";
-import { api } from "~/utils/api";
-
-//Rainbow Kit Connect button import
-import CreateTeamButton from './CreateTeamButton';
-
 
 export default function TreasuryPage () {
     return(
@@ -22,13 +15,6 @@ export default function TreasuryPage () {
                     </div>
                 </div>
 
-                <div className="flex flex-col items-center justify-around">
-                    <div className="text-center ">
-                        <div className="flex items-center justify-center">
-                            <CreateTeamButton />
-                        </div>
-                    </div>
-                </div>
             </main>
 
         </section>

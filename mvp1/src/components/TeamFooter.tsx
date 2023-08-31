@@ -1,12 +1,5 @@
-import Head from "next/head";
-import Link from "next/link";
-import { api } from "~/utils/api";
-
 import Image from "next/image";
 
-
-//Rainbow Kit Connect button import
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 import homeIcon from "./home-icon.svg"
 import chatIcon from "./home-icon.svg"
