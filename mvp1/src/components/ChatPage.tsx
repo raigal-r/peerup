@@ -1,6 +1,3 @@
-import Head from "next/head";
-import Link from "next/link";
-import { api } from "~/utils/api";
 
 //Rainbow Kit Connect button import
 import CreateTeamButton from './CreateTeamButton';
