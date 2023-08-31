@@ -15,7 +15,7 @@ export default function StartPage () {
                     <h1 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
                         PEERUP
                     </h1>
-                    <div className="w-[60vw]">
+                    <div className="w-[75vw]">
                         <p className="text-xl text-center tracking-tight text-white sm:text-xl md:text-xl lg:text-xl xl:text-xl">
                             Welcome in PEERUP the decentralized financial management with chat for teams and small communities  
                         </p>
