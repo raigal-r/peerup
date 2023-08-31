@@ -6,8 +6,6 @@ import Footer from './Footer';
 
 export default function HomePage () {
 
-   
-
     return(
         <section>
             <div className="MyApp flex flex-col min-h-screen bg-[#0097b3] items-between justify-between">

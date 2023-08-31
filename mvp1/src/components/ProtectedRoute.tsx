@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import {
     useAccount,
@@ -18,13 +18,22 @@ function ProtectedRoute({ children }: any) {
     (url: string) => {
       if (!isConnected) {
         setAuthorized(false);
-        return router.push({ pathname: "/" });
+        navigateToHomePage(); // Call the asynchronous function
+        return;
       }
-
+  
       setAuthorized(true);
     },
-    [router, isConnected]
+    [isConnected]
   );
+  
+  const navigateToHomePage = async () => {
+    try {
+      await router.push({ pathname: "/" });
+    } catch (error) {
+      console.error("Error navigating:", error);
+    }
+  };
 
   useEffect(() => {
     // on initial load - run auth check

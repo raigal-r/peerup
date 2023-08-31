@@ -27,7 +27,10 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
-    "**/*.mjs"
+    "**/*.mjs",
+    "**/*.svg",
+    "src/components", 
+    "src/svg.d.ts"
   ],
   "exclude": ["node_modules"]
 }
