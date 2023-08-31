@@ -43,6 +43,8 @@ const wagmiConfig = createConfig({
 })
 /*******************************************************************/
 
+//For the xmtp chat
+//window.Buffer = window.Buffer ?? Buffer;
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
