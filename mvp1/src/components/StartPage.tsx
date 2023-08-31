@@ -5,8 +5,19 @@ import { api } from "~/utils/api";
 //Rainbow Kit Connect button import
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
+import {
+    useAccount,
+    useConnect,
+    useDisconnect,
+    useEnsAvatar,
+    useEnsName,
+  } from 'wagmi'
+
 
 export default function StartPage () {
+
+    const { address, connector, isConnected } = useAccount()
+
     return(
         <section>
             <main className="flex min-h-screen flex-col items-center justify-around bg-[#0097b3]">

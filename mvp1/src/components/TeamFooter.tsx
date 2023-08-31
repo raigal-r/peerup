@@ -5,7 +5,7 @@ import { api } from "~/utils/api";
 //Rainbow Kit Connect button import
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
-export default function Footer () {
+export default function TeamFooter () {
     return(
         <section>
             <main>
@@ -19,10 +19,10 @@ export default function Footer () {
                                 <img src="./chat-icon.svg" className="max-w-[100%]" alt="chat-icon"/>  
                             </div>
                             <div>
-                                <img src="./notifications-icon.svg" className="max-w-[100%]" alt="notifications-icon"/>
+                                <img src="./treasury-icon.svg" className="max-w-[100%]" alt="treasury-icon"/>
                             </div>
                             <div>
-                                <img src="./profile-icon.svg" className="max-w-[100%]" alt="profile-icon"/>
+                                <img src="./contacts-icon.svg" className="max-w-[100%]" alt="contacts-icon"/>
                             </div>
                         </div>
                     </div>
