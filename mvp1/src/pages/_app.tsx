@@ -51,19 +51,16 @@ const wagmiConfig = createConfig({
 })
 /*******************************************************************/
 
-const queryClient = new QueryClient();
-export default function App({ Component, pageProps }: AppProps) {
+
+
+const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <WagmiConfig config={wagmiConfig}>
-        <RainbowKitProvider chains={chains}>
-          <div className="bg-gradient-to-br from-base-100 to-base-200">
-            <Component {...pageProps}></Component>
-            <ToastContainer />
-          </div>
-          <ReactQueryDevtools initialIsOpen={false} />
-        </RainbowKitProvider>
-      </WagmiConfig>
-    </QueryClientProvider>
+  <WagmiConfig config={wagmiConfig}>
+      <RainbowKitProvider chains={chains}>
+        <Component {...pageProps} />
+      </RainbowKitProvider>
+  </WagmiConfig>
   );
-}
+};
+
+export default api.withTRPC(MyApp);
