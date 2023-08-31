@@ -2,6 +2,14 @@ import { type AppType } from "next/app";
 import { api } from "~/utils/api";
 import "~/styles/globals.css";
 
+
+import "@/styles/globals.css";
+import "react-toastify/dist/ReactToastify.css";
+import type { AppProps } from "next/app";
+import { ToastContainer } from "react-toastify";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
 //RainbowKit imports
 import '@rainbow-me/rainbowkit/styles.css';
 import {
@@ -43,17 +51,19 @@ const wagmiConfig = createConfig({
 })
 /*******************************************************************/
 
-//For the xmtp chat
-//window.Buffer = window.Buffer ?? Buffer;
-
-const MyApp: AppType = ({ Component, pageProps }) => {
+const queryClient = new QueryClient();
+export default function App({ Component, pageProps }: AppProps) {
   return (
-  <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains}>
-        <Component {...pageProps} />
-      </RainbowKitProvider>
-  </WagmiConfig>
+    <QueryClientProvider client={queryClient}>
+      <WagmiConfig config={wagmiConfig}>
+        <RainbowKitProvider chains={chains}>
+          <div className="bg-gradient-to-br from-base-100 to-base-200">
+            <Component {...pageProps}></Component>
+            <ToastContainer />
+          </div>
+          <ReactQueryDevtools initialIsOpen={false} />
+        </RainbowKitProvider>
+      </WagmiConfig>
+    </QueryClientProvider>
   );
-};
-
-export default api.withTRPC(MyApp);
+}
