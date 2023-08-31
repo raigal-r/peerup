@@ -10,7 +10,7 @@ export default function StartPage () {
     return(
         <section>
             <main className="flex min-h-screen flex-col items-center justify-around bg-[#0097b3]">
-                <div className="flex flex-col items-center justify-center border-dotted border-2 border-gray-400" >
+                <div className="flex flex-col items-center justify-center" >
                     <img src="./192.png"/>
                     <h1 className="text-2xl mb-10 font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
                         PEERUP
@@ -25,7 +25,7 @@ export default function StartPage () {
                     </h2>
                 </div>
 
-                <div className="flex flex-col items-center justify-around border-dotted border-2 border-gray-400">
+                <div className="flex flex-col items-center justify-around">
                     <div className="text-center ">
                         <p className="text-xl w-[75vw] text-center tracking-tight text-white  sm:text-xl md:text-xl lg:text-xl xl:text-xl mb-4">
                             Connect with an existing wallet:
@@ -36,9 +36,9 @@ export default function StartPage () {
                     </div>
                 </div>
 
-                <div className="flex flex-col items-center justify-around mb-10 opacity-60 border-dotted border-2 border-gray-400 bg-[#0097b3] rounded-xl pr-5 pl-5">
+                <div className="flex flex-col items-center justify-around mb-10 border-opacity-10 bg-[#0097b3] border-solid border-2 border-gray-100 rounded-xl pr-5 pl-5">
                     
-                    <div>  
+                    <div className="opacity-60">  
                         <div className="flex flex-col items-center justify-center mb-4">
                             <div className="mb-4">
                                 <p className="text-xl tracking-tight text-white">
