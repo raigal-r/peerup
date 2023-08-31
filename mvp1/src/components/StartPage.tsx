@@ -36,10 +36,9 @@ export default function StartPage () {
                     </div>
                 </div>
 
-                <div className="flex flex-col items-center justify-around opacity-60 border-dotted border-2 border-gray-400 bg-[#0097b3] rounded-xl pr-5 pl-5">
+                <div className="flex flex-col items-center justify-around mb-10 opacity-60 border-dotted border-2 border-gray-400 bg-[#0097b3] rounded-xl pr-5 pl-5">
                     
-                    <div>
-                        
+                    <div>  
                         <div className="flex flex-col items-center justify-center mb-4">
                             <div className="mb-4">
                                 <p className="text-xl tracking-tight text-white">
