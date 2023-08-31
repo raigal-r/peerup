@@ -23,7 +23,7 @@ function ProtectedRoute({ children }: any) {
 
       setAuthorized(true);
     },
-    [router, address]
+    [router, isConnected]
   );
 
   useEffect(() => {
