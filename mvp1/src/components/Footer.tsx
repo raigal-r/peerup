@@ -3,9 +3,9 @@ import { useRouter } from "next/router";
 
 
 import homeIcon from "../../public/home-icon.svg"
-import chatIcon from "../../public/home-icon.svg"
-import notificationsIcon from "../../public/home-icon.svg"
-import profileIcon from "../../public/home-icon.svg"
+import chatIcon from "../../public/chat-icon.svg"
+import notificationsIcon from "../../public/notifications-icon.svg"
+import profileIcon from "../../public/profile-icon.svg"
 
 
 const Footer = () => {
