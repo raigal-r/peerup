@@ -25,6 +25,12 @@ export default function Home() {
         {/* import manifest for the PWA configuration*/}
         <link rel="manifest" href="/manifest.json" />
 
+        {/* import manifest for the Roboto font family*/}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@100&display=swap" rel="stylesheet" />
+
+
       </Head>
   
       <Header />
