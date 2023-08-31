@@ -27,7 +27,7 @@ export default function StartPage () {
 
                 <div className="flex flex-col items-center justify-around border-dotted border-2 border-gray-400">
                     <div className="text-center ">
-                        <p className="text-xl w-[50vw] text-center tracking-tight text-white  sm:text-xl md:text-xl lg:text-xl xl:text-xl">
+                        <p className="text-xl w-[75vw] text-center tracking-tight text-white  sm:text-xl md:text-xl lg:text-xl xl:text-xl">
                             Connect with an existing wallet:
                         </p>
                         <div className="flex items-center justify-center">
