@@ -1,11 +1,13 @@
-import Head from "next/head";
-import Link from "next/link";
-import { api } from "~/utils/api";
+import { useRouter } from "next/router";
+
 
 //Rainbow Kit Connect button import
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
-export default function Header () {
+const Header = () => {
+
+    const router = useRouter();
+
     return(
         <section>
             <main>
@@ -30,3 +32,4 @@ export default function Header () {
         </section>
     )
 }
+export default Header;

@@ -1,8 +1,5 @@
-//Rainbow Kit Connect button import
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 
-
-export default function CreateTeamButton () {
+const CreateTeamButton = () => {
     return(
         <section>
             <main className="flex flex-col items-center justify-around bg-[#0097b3]">
@@ -25,3 +22,5 @@ export default function CreateTeamButton () {
     )
 
 }
+
+export default CreateTeamButton;

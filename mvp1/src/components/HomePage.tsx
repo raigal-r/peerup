@@ -1,14 +1,16 @@
-import Head from "next/head";
-import Link from "next/link";
-import { api } from "~/utils/api";
-
 //Rainbow Kit Connect button import
 import CreateTeamButton from './CreateTeamButton';
+import Header from './Header';
+import Footer from './Footer';
 
 
 export default function HomePage () {
+
+   
+
     return(
         <section className="MyApp">
+            <Header/>
             <main className="flex flex-col items-center justify-between bg-[#0097b3] pt-10">
                 <div className="flex flex-col items-center justify-center" >
                     <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl max-h-[64px] mb-4">
@@ -30,6 +32,7 @@ export default function HomePage () {
                     </div>
                 </div>
             </main>
+            <Footer/>
 
         </section>
     )

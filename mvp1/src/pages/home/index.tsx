@@ -17,9 +17,7 @@ const Index = () => {
     <>
       <Suspense fallback={<div>Loading...</div>}>
         <ProtectedRoute>
-            <Header />
             <AppDynamic />
-            <Footer />
         </ProtectedRoute>
       </Suspense>
     </>

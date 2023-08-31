@@ -1,8 +1,3 @@
-
-//Rainbow Kit Connect button import
-import CreateTeamButton from './CreateTeamButton';
-
-
 export default function ChatPage () {
     return(
         <section className="MyApp">
@@ -19,13 +14,7 @@ export default function ChatPage () {
                     </div>
                 </div>
 
-                <div className="flex flex-col items-center justify-around">
-                    <div className="text-center ">
-                        <div className="flex items-center justify-center">
-                            <CreateTeamButton />
-                        </div>
-                    </div>
-                </div>
+    
             </main>
 
         </section>

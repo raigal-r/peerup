@@ -3,8 +3,8 @@ import React, { useCallback, useEffect, useState } from "react";
 
 import {
     useAccount,
-    useConnect,
-    useDisconnect,
+    //useConnect,
+    //useDisconnect,
   } from 'wagmi'
 
 function ProtectedRoute({ children }: any) {
