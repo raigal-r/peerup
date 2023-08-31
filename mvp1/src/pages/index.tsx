@@ -25,7 +25,7 @@ const Index = () => {
 
   useEffect(() => {
     if (isConnected) {
-      router.push({ pathname: "/home" }).catch(error => {
+      router.push({ pathname: "/homepage" }).catch(error => {
         console.error("Error navigating:", error);
       });
     }
