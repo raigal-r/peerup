@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-import homeIcon from "./home-icon.svg"
-import chatIcon from "./chat-icon.svg"
-import treasuryIcon from "./treasury-icon.svg"
-import contactsIcon from "./contacts-icon.svg"
+import homeIcon from "../../public/home-icon.svg"
+import chatIcon from "../../public/chat-icon.svg"
+import treasuryIcon from "../../public/treasury-icon.svg"
+import contactsIcon from "../../public/contacts-icon.svg"
 
 export default function TeamFooter () {
     return(

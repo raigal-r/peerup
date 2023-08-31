@@ -2,10 +2,10 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 
-import homeIcon from "./home-icon.svg"
-import chatIcon from "./home-icon.svg"
-import notificationsIcon from "./home-icon.svg"
-import profileIcon from "./home-icon.svg"
+import homeIcon from "../../public/home-icon.svg"
+import chatIcon from "../../public/home-icon.svg"
+import notificationsIcon from "../../public/home-icon.svg"
+import profileIcon from "../../public/home-icon.svg"
 
 
 const Footer = () => {
