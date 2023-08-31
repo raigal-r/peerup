@@ -5,10 +5,10 @@ import chatIcon from "../../public/chat-icon.svg"
 import treasuryIcon from "../../public/treasury-icon.svg"
 import contactsIcon from "../../public/contacts-icon.svg"
 
-export default function TeamFooter () {
+const TeamFooter = () => {
     return(
         <section>
-            <main className="MyApp">
+            <main >
                 <div>
                     <div className="container-fluid min-h-[10px] flex flex-grow justify-between bg-[#0097b3] border-opacity-20 border-solid border-2 border-gray-100 rounded-xl">
                         <div className="flex flex-grow justify-around items-center ml-4 mt-4 mb-4">
@@ -33,3 +33,5 @@ export default function TeamFooter () {
         </section>
     )
 }
+
+export default TeamFooter;
