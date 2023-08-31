@@ -5,7 +5,6 @@ import { api } from "~/utils/api";
 //Rainbow Kit Connect button import
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
-
 export default function Header () {
     return(
         <section>
@@ -27,5 +26,4 @@ export default function Header () {
 
         </section>
     )
-
 }

@@ -5,3 +5,22 @@
 .box-shadow {
     box-shadow: 0 0 10px 0.1px rgba(255, 255, 255, 0.493);
 }
+
+.btn {
+    border: 0px;
+    outline: 0px;
+    padding: 24px 9px;
+    font-weight: 500;
+    margin: 10px;
+    border-radius: 12px;
+    font-size: 17px;
+    cursor: pointer;
+    width: 165px;
+    height: 44px;
+    text-align: start;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    background: #D53A94;
+}

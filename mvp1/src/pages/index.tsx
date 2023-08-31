@@ -26,13 +26,10 @@ export default function Home() {
         <link rel="manifest" href="/manifest.json" />
 
       </Head>
-      <div className="box-shadow margin-10px">
-        <Header />
-      </div>
-      <div>
-        
-      </div>
-      
+  
+      <Header />
+      <StartPage/>
+  
       </div>
     </>
   );
