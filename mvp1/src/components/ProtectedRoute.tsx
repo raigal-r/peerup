@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useState } from "react";
+import { ReactNode } from "react"; // Import ReactNode type
+
 
 import {
     useAccount,
@@ -7,12 +9,11 @@ import {
     //useDisconnect,
   } from 'wagmi'
 
-function ProtectedRoute({ children }: any) {
+function ProtectedRoute({ children }: { children: ReactNode }) {
   const router = useRouter();
   const [authorized, setAuthorized] = useState(false);
 
   const { address, connector, isConnected } = useAccount()
-
 
   const authCheck = useCallback(
     (url: string) => {
@@ -27,12 +28,14 @@ function ProtectedRoute({ children }: any) {
     [isConnected]
   );
   
-  const navigateToHomePage = async () => {
-    try {
-      await router.push({ pathname: "/" });
-    } catch (error) {
-      console.error("Error navigating:", error);
-    }
+  const navigateToHomePage = () => {
+    router.push({ pathname: "/" })
+      .then(() => {
+        // Success
+      })
+      .catch(error => {
+        console.error("Error navigating:", error);
+      });
   };
 
   useEffect(() => {

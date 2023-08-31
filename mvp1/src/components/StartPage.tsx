@@ -1,6 +1,11 @@
 //Rainbow Kit Connect button import
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
+import Image from "next/image"; 
+import logo192 from "../../public/192.png"
+
+
+
 import {
     useAccount,
     useConnect,
@@ -18,7 +23,7 @@ export default function StartPage () {
         <section className="MyApp">
             <main className="flex min-h-screen flex-col items-center justify-around bg-[#0097b3]">
                 <div className="flex flex-col items-center justify-center" >
-                    <img src="./192.png"/>
+                    <Image src={logo192} className="max-w-[15%]" alt='logo'/>
                     <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl max-h-[64px] mb-4">
                         PEERUP
                     </h1>
@@ -54,7 +59,7 @@ export default function StartPage () {
                             </div>
                             <div className="google-btn backdrop-blur-md">
                                 <div className="google-icon-wrapper">
-                                    <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                                    <Image className="google-icon" width={1} height={1} src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt='googleicon'/>
                                 </div>
                                 <p className="btn-text"><b>Sign in with google</b></p>
                             </div>
