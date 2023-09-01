@@ -19,103 +19,100 @@ import {
     arbitrum,
   } from 'wagmi/chains';
 
-interface NotificationProps {
-    setNotificationMessage: React.Dispatch<React.SetStateAction< any>>;
-  }
+// interface NotificationProps {
+//     setNotificationMessage: React.Dispatch<React.SetStateAction< any>>;
+//   }
 
 
-const ChatPage = () => {
+export default function NotificationsPage () {
+    //  const [notificationMessage, setNotificationMessage] = useState<any>(
+    //     null
+    //    );
 
-    const [notificationMessage, setNotificationMessage] = useState<any>(
-        null
-      );
+//     const handleNotification = (componentName: Text) => {
+//         setNotificationMessage(componentName);
+//     };
 
-    const handleNotification = (componentName: Text) => {
-        setNotificationMessage(componentName);
-    };
-
-    const { address,connector} = useAccount()
-    const userCAIP = `eip155:${polygon}:${address}`;
-
-
-  const [sdkSocket, setSDKSocket] = useState<any>(null);
-  const [isConnected, setIsConnected] = useState(sdkSocket?.connected);
-
-  const addSocketEvents = () => {
-    sdkSocket?.on(EVENTS.CONNECT, () => {
-      setIsConnected(true);
-    })
-
-    sdkSocket?.on(EVENTS.DISCONNECT, () => {
-      setIsConnected(false);
-    })
-
-    sdkSocket?.on(EVENTS.USER_FEEDS, (feedItem:any) => {
-      /**
-       * "feedItem" is the latest notification received
-       */
-      console.log(feedItem);
-      handleNotification(feedItem)
-    })
-  };
-
-  const removeSocketEvents = () => {
-    sdkSocket?.off(EVENTS.CONNECT);
-    sdkSocket?.off(EVENTS.DISCONNECT);
-  };
-
-  const toggleConnection = () => {
-    if (sdkSocket?.connected) {
-      sdkSocket.disconnect();
-    } else {
-      sdkSocket.connect();
-    }
-  };
+//     const { address,connector} = useAccount()
+//     const userCAIP = `eip155:${polygon}:${address}`;
 
 
-  useEffect(() => {
-    if (sdkSocket) {
-      addSocketEvents();
-    }
-    return () => {
-      removeSocketEvents();
-    };
-  }, [sdkSocket]);
+//   const [sdkSocket, setSDKSocket] = useState<any>(null);
+//   const [isConnected, setIsConnected] = useState(sdkSocket?.connected);
 
-  useEffect(() => {
-    const connectionObject = createSocketConnection({
-      user: userCAIP,
-      env: 'dev' as ENV,
-      socketOptions: { autoConnect: false }
-    });
+//   const addSocketEvents = () => {
+//     sdkSocket?.on(EVENTS.CONNECT, () => {
+//       setIsConnected(true);
+//     })
+
+//     sdkSocket?.on(EVENTS.DISCONNECT, () => {
+//       setIsConnected(false);
+//     })
+
+//     sdkSocket?.on(EVENTS.USER_FEEDS, (feedItem:any) => {
+//       /**
+//        * "feedItem" is the latest notification received
+//        */
+//       console.log(feedItem);
+//       handleNotification(feedItem)
+//     })
+//   };
+
+//   const removeSocketEvents = () => {
+//     sdkSocket?.off(EVENTS.CONNECT);
+//     sdkSocket?.off(EVENTS.DISCONNECT);
+//   };
+
+//   const toggleConnection = () => {
+//     if (sdkSocket?.connected) {
+//       sdkSocket.disconnect();
+//     } else {
+//       sdkSocket.connect();
+//     }
+//   };
 
 
-    setSDKSocket(connectionObject);
+//   useEffect(() => {
+//     if (sdkSocket) {
+//       addSocketEvents();
+//     }
+//     return () => {
+//       removeSocketEvents();
+//     };
+//   }, [sdkSocket]);
 
-    return () => {
-      if (sdkSocket) {
-        sdkSocket.disconnect();
-      }
-    };
-  }, []);
+//   useEffect(() => {
+//     const connectionObject = createSocketConnection({
+//       user: userCAIP,
+//       env: 'dev' as ENV,
+//       socketOptions: { autoConnect: false }
+//     });
 
-  return (
-    <div>
-      <h1>Socket Hello World</h1>
 
-      <div>
-        <p>Connection Status : {JSON.stringify(isConnected)}</p>
+//     setSDKSocket(connectionObject);
 
-         {/* Display the notification message */}
-         <p>
-         <p>Notification: {notificationMessage || 'No notifications'}</p>
-        </p>
+//     return () => {
+//       if (sdkSocket) {
+//         sdkSocket.disconnect();
+//       }
+//     };
+//   }, []);
+
+   return (
+     <div>
+       <h1>Socket Hello World</h1>
+
+       <div>
+         {/*<p>Connection Status : {JSON.stringify(isConnected)}</p>*/}
+
+          {/* Display the notification message */}
+          
+           {/*<p>Notification: {notificationMessage || 'No notifications'}</p>*/}
+         
     
 
-        <button onClick={toggleConnection}>{isConnected ? 'disconnect' : 'connect'}</button>
-      </div>
-    </div>
-  );
+         {/*<button onClick={toggleConnection}>{isConnected ? 'disconnect' : 'connect'}</button>*/}
+       </div>
+     </div>
+   );
 }
-
-export default ChatPage;
