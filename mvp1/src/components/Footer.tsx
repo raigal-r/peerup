@@ -27,12 +27,12 @@ const Footer: React.FC<FooterProps> = ({setSelectedComponent }) => {
                     <div className="container-fluid min-h-[10px] flex flex-grow justify-between bg-[#0097b3] border-opacity-20 border-solid border-2 border-gray-100 rounded-xl">
                         <div className="flex flex-grow justify-around items-center ml-4 mt-4 mb-4">
 
-                            <div className="cursor-pointer" onClick={() => handleClick('home')}>
+                            <button className="cursor-pointer" onClick={() => handleClick('home')}>
                                 <Image src={homeIcon as "*.svg"} className="max-w-[100%]" alt="home-icon"/>
-                            </div>
-                            <div className="cursor-pointer" onClick={() => handleClick('chat')}>
+                            </button>
+                            <button className="cursor-pointer" onClick={() => handleClick('chat')}>
                                 <Image src={chatIcon as "*.svg"} className="max-w-[100%]" alt="chat-icon"/>  
-                            </div>
+                            </button>
                             <div className="cursor-pointer" onClick={() => handleClick('notification')}>
                                 <Image src={notificationsIcon as "*.svg"} className="max-w-[100%]" alt="notifications-icon"/>
                             </div>
