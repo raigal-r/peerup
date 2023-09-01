@@ -1,23 +1,84 @@
-export default function ChatPage () {
-    return(
-        <section className="MyApp">
-            <main className="flex flex-col items-center justify-between bg-[#0097b3] pt-10">
-                <div className="flex flex-col items-center justify-center" >
-                    <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl max-h-[64px] mb-4">
-                        Your Chats
-                    </h1>
+import { useState, useEffect } from "react";
+import { createSocketConnection, EVENTS } from '@pushprotocol/socket';
+import { ENV } from "@pushprotocol/socket/src/lib/constants";
 
-                    <div className="w-[75vw]">
-                        <p className="text-xl text-center tracking-tight text-white sm:text-xl md:text-xl lg:text-xl xl:text-xl mb-20">
-                            Here will appear your chat
-                        </p>
-                    </div>
-                </div>
+const user = '0xD8634C39BBFd4033c0d3289C4515275102423681';
+const chainId = 5;
 
-    
-            </main>
+const userCAIP = `eip155:${chainId}:${user}`;
 
-        </section>
-    )
+function App() {
+  const [sdkSocket, setSDKSocket] = useState<any>(null);
+  const [isConnected, setIsConnected] = useState(sdkSocket?.connected);
 
+  const addSocketEvents = () => {
+    sdkSocket?.on(EVENTS.CONNECT, () => {
+      setIsConnected(true);
+    })
+
+    sdkSocket?.on(EVENTS.DISCONNECT, () => {
+      setIsConnected(false);
+    })
+
+    sdkSocket?.on(EVENTS.USER_FEEDS, (feedItem:any) => {
+      /**
+       * "feedItem" is the latest notification received
+       */
+      console.log(feedItem);
+    })
+  };
+
+  const removeSocketEvents = () => {
+    sdkSocket?.off(EVENTS.CONNECT);
+    sdkSocket?.off(EVENTS.DISCONNECT);
+  };
+
+  const toggleConnection = () => {
+    if (sdkSocket?.connected) {
+      sdkSocket.disconnect();
+    } else {
+      sdkSocket.connect();
+    }
+  };
+
+
+  useEffect(() => {
+    if (sdkSocket) {
+      addSocketEvents();
+    }
+    return () => {
+      removeSocketEvents();
+    };
+  }, [sdkSocket]);
+
+  useEffect(() => {
+    const connectionObject = createSocketConnection({
+      user: userCAIP,
+      env: 'dev' as ENV,
+      socketOptions: { autoConnect: false }
+    });
+
+
+    setSDKSocket(connectionObject);
+
+    return () => {
+      if (sdkSocket) {
+        sdkSocket.disconnect();
+      }
+    };
+  }, []);
+
+  return (
+    <div>
+      <h1>Socket Hello World</h1>
+
+      <div>
+        <p>Connection Status : {JSON.stringify(isConnected)}</p>
+
+        <button onClick={toggleConnection}>{isConnected ? 'disconnect' : 'connect'}</button>
+      </div>
+    </div>
+  );
 }
+
+export default App;
