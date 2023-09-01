@@ -2,12 +2,42 @@ import { useState, useEffect } from "react";
 import { createSocketConnection, EVENTS } from '@pushprotocol/socket';
 import { ENV } from "@pushprotocol/socket/src/lib/constants";
 
-const user = '0xD8634C39BBFd4033c0d3289C4515275102423681';
-const chainId = 5;
+import {
+    useAccount,
+    useConnect,
+    useDisconnect,
+    useEnsAvatar,
+    useEnsName,
+    useNetwork,
+  } from 'wagmi'
+import {
+    mainnet,
+    goerli,
+    sepolia,
+    polygon,
+    optimism,
+    arbitrum,
+  } from 'wagmi/chains';
 
-const userCAIP = `eip155:${chainId}:${user}`;
+interface NotificationProps {
+    setNotificationMessage: React.Dispatch<React.SetStateAction< any>>;
+  }
 
-function App() {
+
+const ChatPage = () => {
+
+    const [notificationMessage, setNotificationMessage] = useState<any>(
+        null
+      );
+
+    const handleNotification = (componentName: Text) => {
+        setNotificationMessage(componentName);
+    };
+
+    const { address,connector} = useAccount()
+    const userCAIP = `eip155:${polygon}:${address}`;
+
+
   const [sdkSocket, setSDKSocket] = useState<any>(null);
   const [isConnected, setIsConnected] = useState(sdkSocket?.connected);
 
@@ -25,6 +55,7 @@ function App() {
        * "feedItem" is the latest notification received
        */
       console.log(feedItem);
+      handleNotification(feedItem)
     })
   };
 
@@ -75,10 +106,16 @@ function App() {
       <div>
         <p>Connection Status : {JSON.stringify(isConnected)}</p>
 
+         {/* Display the notification message */}
+         <p>
+         <p>Notification: {notificationMessage || 'No notifications'}</p>
+        </p>
+    
+
         <button onClick={toggleConnection}>{isConnected ? 'disconnect' : 'connect'}</button>
       </div>
     </div>
   );
 }
 
-export default App;
+export default ChatPage;
